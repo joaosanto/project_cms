@@ -1,4 +1,12 @@
 ProjectCms::Application.routes.draw do
+  
+  match '/main', to: 'main#index'
+  
+  match '*url', to: "cms#index"
+
+  root :controller => :main, :action => :index
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
